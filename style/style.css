@@ -59,6 +59,10 @@ img{
     width: 100px;
     height: 90px;
     background-size: cover;
+    box-shadow: black 5px 0.3px 10px 2px;
+    border-radius: 50%;
+    opacity: 1;
+    transition: background 
 }
 .artCentralizado{
     display:flex;
@@ -72,9 +76,22 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid;
-    border-color: rgb(119, 60, 6);
+    border: 2px solid;
     width: 60x;
     height: 70px;
-    background-color: rgb(235, 203, 163);
+    transition: background 0.3s ease ,transform 0.3s ease;
+    background-color: white;
+}
+.artPocao:hover{
+    background-color: rgb(235, 234, 234)
+    animation: growAndRotate 0.5 ease-in-out infinite alternate;
+}
+
+@keyframes growAndrotate{
+0%{
+    transform: scale(1) rotate(0deg);
+}
+100%{
+    transform: scale(1.08) rotate(3deg);
+}
 }
